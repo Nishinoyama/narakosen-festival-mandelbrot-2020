@@ -15,6 +15,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_SVG' }
     ]
   },
 
@@ -34,7 +37,11 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    ['@nuxtjs/vuetify', {
+      font: {
+        family: 'Segoe UI'
+      }
+    }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -45,18 +52,21 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+      dark: false
+      // themes: {
+      //    light: {
+      //      primary: colors.blue.darken1,
+      //      accent: colors.red.darken1
+      //      secondary: colors.amber.darken3,
+      //      info: colors.teal.lighten1,
+      //      warning: colors.amber.base,
+      //      error: colors.deepOrange.accent4,
+      //      success: colors.green.accent3
+      //    }
+      // }
+    },
+    font: {
+      family: 'Segoe UI'
     }
   },
 
