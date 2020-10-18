@@ -46,6 +46,8 @@
 export default {
   components: {
   },
+  method: {
+  },
   mounted () {
     if (window.MathJax) {
       window.MathJax.Hub.Config({
