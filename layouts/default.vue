@@ -73,9 +73,14 @@ export default {
           to: '/description'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-bank-outline',
+          title: 'ギャラリー',
+          to: '/gallery'
+        },
+        {
+          icon: 'mdi-pencil-box-multiple-outline',
+          title: 'エディット',
+          to: '/simulator'
         }
       ],
       miniVariant: false,
