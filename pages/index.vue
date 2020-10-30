@@ -51,32 +51,6 @@ export default {
     this.createMandelbrot(2.6, -2.1, -1.3)
   },
   methods: {
-    calcX (xx, yy, x) {
-      return xx * xx - yy * yy + x
-    },
-    calcY (xx, yy, y) {
-      return 2 * xx * yy + y
-    },
-    abs2 (x, y) {
-      return Math.sqrt(x * x + y * y)
-    },
-    calcMandelbrot (x, y) {
-      let xx = 0
-      let yy = 0
-      let tx = 0
-      let ty = 0
-      let i
-      for (i = 0; i < 0x100; i++) {
-        tx = this.calcX(xx, yy, x)
-        ty = this.calcY(xx, yy, y)
-        if (this.abs2(tx, ty) > 4) {
-          break
-        }
-        xx = tx
-        yy = ty
-      }
-      return i
-    },
     createMandelbrot (range, dx, dy) {
       const cv = document.getElementById('mandelbrot_sample')
       if (cv.getContext && cv.getContext('2d').createImageData) {
@@ -85,7 +59,7 @@ export default {
         const imgData = context.createImageData(size, size)
         for (let i = 0; i < size; i++) {
           for (let j = 0; j < size; j++) {
-            let t = this.calcMandelbrot(j / size * range + dx, i / size * range + dy)
+            let t = this.calcMandelbrot(j / size * range + dx, i / size * range + dy, 0x100)
             if (t === 0x100) {
               imgData.data[i * imgData.width * 4 + j * 4] = 0
               imgData.data[i * imgData.width * 4 + j * 4 + 1] = 0
