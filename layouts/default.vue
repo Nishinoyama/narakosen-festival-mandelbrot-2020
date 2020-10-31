@@ -73,6 +73,11 @@ export default {
           to: '/description'
         },
         {
+          icon: 'mdi-comment-alert-outline',
+          title: '詳細説明',
+          to: '/deep'
+        },
+        {
           icon: 'mdi-bank-outline',
           title: 'ギャラリー',
           to: '/gallery'
