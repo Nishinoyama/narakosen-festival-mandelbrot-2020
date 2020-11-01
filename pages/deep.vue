@@ -29,11 +29,20 @@
             どういうことでしょうか。実はこの2条件は<strong>同値</strong>であります。証明してみましょう。
           </p>
           <p class="proof">
-            証明）<br>
-            $z_{n+1} = z_n^2 + C$、任意の複素数$x,y$において、三角不等式$|x| + |y| \geq |x+y| \Leftrightarrow |x+y| \geq |x| - |y|$より、
+            証明始）<br>
+            同値であることより裏が成り立つため、「絶対値が$2$を超えること」$\Leftrightarrow$「発散すること」を示す。<br>
+            $\Leftarrow$は自明であるため、$\Rightarrow$を示す。<br>
+            任意の複素数$x,y$において、三角不等式$|x+y| \geq |x| - |y|$より、
             $|z_{n+1}| = |z_{n}^2 + C| \geq |z_n^2| - |C|$となる。 <br>
             数列$\{z_n\}$において、$k$項目で初めて2を超えた$\left(|z_k| > 2\right)$とする。 <br>
-            この時、$|z_{k+1}| = |z_{k}^2 + C| \geq |z_k^2| - |C|$となる。 <br>
+            $|C| > 2$の場合、$k=1$となり（1項目で$|z_1| = |C| > 2$となるため）<br>
+            $|z_{k+1}| \geq |z_k^2| - |C| = |z_k| - |z_k| = |z_k| ( |z_k| - 1 ) \Rightarrow |z_{n+1}| \geq |z_n|r \quad (r = |z_n - 1| > 1, n \geq k)$  <br>
+            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| \geq |z_k| r^n \rightarrow \infty$より$|z_n| \rightarrow \infty$<br>
+            また、$|C| \leq 2$の場合、自明に$|z_k| >|C|$であり、<br>
+            $|z_{k+1}| \geq |z_k^2| - |C| > 2|z_k| - |C| = |z_k| + (|z_k| - |C|) \Rightarrow |z_{n+1}| > |z_n| + d \quad (d = |z_n| - |C| > 0, n \geq k)$<br>
+            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| > |z_k| + nd \rightarrow \infty$より$|z_n| \rightarrow \infty$<br>
+            したがって、数列$\{z_n\}$において絶対値が$2$を超えないと発散しないことが示された。<br>
+            証明終）
           </p>
         </v-card-text>
         <v-card-text>
