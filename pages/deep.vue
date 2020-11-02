@@ -34,15 +34,28 @@
             $\Leftarrow$は自明であるため、$\Rightarrow$を示す。<br>
             任意の複素数$x,y$において、三角不等式$|x+y| \geq |x| - |y|$より、
             $|z_{n+1}| = |z_{n}^2 + C| \geq |z_n^2| - |C|$となる。 <br>
-            数列$\{z_n\}$において、$k$項目で初めて2を超えた$\left(|z_k| > 2\right)$とする。 <br>
+            数列$\{z_n\}$において、$k$項目で初めて2を超えた$\left(|z_k| > 2\right)$とする。 <br> <br>
             $|C| > 2$の場合、$k=1$となり（1項目で$|z_1| = |C| > 2$となるため）<br>
-            $|z_{k+1}| \geq |z_k^2| - |C| = |z_k| - |z_k| = |z_k| ( |z_k| - 1 ) \Rightarrow |z_{n+1}| \geq |z_n|r \quad (r = |z_n - 1| > 1, n \geq k)$  <br>
-            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| \geq |z_k| r^n \rightarrow \infty$より$|z_n| \rightarrow \infty$<br>
-            また、$|C| \leq 2$の場合、自明に$|z_k| >|C|$であり、<br>
-            $|z_{k+1}| \geq |z_k^2| - |C| > 2|z_k| - |C| = |z_k| + (|z_k| - |C|) \Rightarrow |z_{n+1}| > |z_n| + d \quad (d = |z_n| - |C| > 0, n \geq k)$<br>
-            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| > |z_k| + nd \rightarrow \infty$より$|z_n| \rightarrow \infty$<br>
+            $|z_{k+1}| \geq |z_k^2| - |C| = |z_k| - |z_k| = |z_k| ( |z_k| - 1 )$<br>
+            $\Rightarrow |z_{n+1}| \geq |z_n|r \quad (r = |z_n - 1| > 1, n \geq k)$  <br>
+            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| \geq |z_k| r^n \rightarrow \infty$より$|z_n| \rightarrow \infty$<br> <br>
+            $|C| \leq 2$の場合、自明に$|z_k| >|C|$であり、<br>
+            $|z_{k+1}| \geq |z_k^2| - |C| > 2|z_k| - |C| = |z_k| + (|z_k| - |C|)$<br>
+            $\Rightarrow |z_{n+1}| > |z_n| + d \quad (d = |z_n| - |C| > 0, n \geq k)$<br>
+            よって、数列$\{z_n\}$において$n \rightarrow \infty$のとき、$|z_n| > |z_k| + nd \rightarrow \infty$より$|z_n| \rightarrow \infty$<br> <br>
             したがって、数列$\{z_n\}$において絶対値が$2$を超えないと発散しないことが示された。<br>
             証明終）
+          </p>
+          <hr class="my-3">
+        </v-card-text>
+        <v-card-title class="headline">
+          マンデルブロ集合の親戚
+        </v-card-title>
+        <v-card-text>
+          <p>
+            また、マンデルブロ集合の親戚として、<strong class="blue--text">ジュリア集合</strong>もあります。
+            ジュリア集合では、条件はそのままですが、数列$\{z_n\}$の初期値、$z_0$が$C$となり、漸化式の$C$が定数となります。
+            詳しくは「ジュリア集合」で検索してみてください。マンデルブロ集合と似た模様が見受けられます。
           </p>
         </v-card-text>
         <v-card-text>
@@ -52,17 +65,17 @@
           <v-btn
             color="secondary"
             nuxt
-            to="/"
+            to="/description"
           >
-            戻る<span class="d-none d-sm-block">（始めに）</span>
+            戻る<span class="d-none d-sm-block">（簡易な説明）</span>
           </v-btn>
           <v-spacer />
           <v-btn
             color="primary"
             nuxt
-            to="/deep"
+            to="/gallery"
           >
-            次へ<span class="d-none d-sm-block">（もっと詳しい説明）</span>
+            次へ<span class="d-none d-sm-block">（ギャラリー）</span>
           </v-btn>
         </v-card-actions>
       </v-card>
